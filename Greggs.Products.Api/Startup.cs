@@ -12,6 +12,8 @@ public class Startup
         services.AddControllers();
 
         services.AddSwaggerGen();
+
+        services.AddScoped<IDataAccess, ProductAccess>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
